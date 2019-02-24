@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <div class="centralized">
+      <% flash.each do |level, notice| %>
+        <div class="<%= level %>"><%= notice %></div>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,13 @@
+<div class="flex">
+  <!-- busca_binaria -->
+  <div class="centralized">
+    <h2>Insira a senha de 5 dígitos numéricos.</h2>
+    <h3 class="tries-left"> Você tem <%= @tries_left %> tentativas restantes. </h3>
+    <%= form_for(:password, url: '/', method: 'post', class: 'form') do |f| %>
+    <div id="container">
+      <div id="input"></div>
+      <%= f.text_field :password, id: 'hiddenInput' %>
+    </div>
+    <% end %>
+  </div>
+</div>
